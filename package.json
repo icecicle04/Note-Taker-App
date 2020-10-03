@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/icecicle04/Note-Taker-App/issues"
   },
-  "homepage": "https://github.com/icecicle04/Note-Taker-App#readme"
+  "homepage": "https://github.com/icecicle04/Note-Taker-App#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
