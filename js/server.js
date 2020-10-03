@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/api/notes", (req, res) => {
-  fs.readFile("./db.json", "utf-8", (err, data) => {
+  fs.readFile("/db.json", "utf-8", (err, data) => {
     if (err) {
       console.log(err);
       return res.status(500).json({
@@ -28,7 +28,7 @@ app.get("/api/notes", (req, res) => {
 
 app.post("/api/notes", (req, res) => {
   console.log(req.body);
-  fs.readFile("./db.json", "utf-8", (err, data) => {
+  fs.readFile("/db.json", "utf-8", (err, data) => {
     if (err) {
       console.log(err);
       return res.status(500).json({
@@ -41,7 +41,7 @@ app.post("/api/notes", (req, res) => {
     const updatedData = JSON.parse(data);
     updatedData.push(req.body);
     console.log(updatedData);
-    fs.writeFile("./db.json", JSON.stringify(updatedData), (err) => {
+    fs.writeFile("/db.json", JSON.stringify(updatedData), (err) => {
       if (err)
         if (err) {
           console.log(err);
