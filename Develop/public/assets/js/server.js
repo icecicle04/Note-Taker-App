@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.post("/api/students", (req, res) => {
+app.post("../notes", (req, res) => {
   console.log(req.body);
 });
 
