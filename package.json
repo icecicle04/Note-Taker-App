@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/icecicle04/Note-Taker-App.git"
+    "url": "git+https://github.com/icecicle04/note-taker-app.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/icecicle04/Note-Taker-App/issues"
+    "url": "https://github.com/icecicle04/note-taker-app/issues"
   },
-  "homepage": "https://github.com/icecicle04/Note-Taker-App#readme",
+  "homepage": "https://github.com/icecicle04/note-taker-app#readme",
   "dependencies": {
     "express": "^4.17.1"
   },
