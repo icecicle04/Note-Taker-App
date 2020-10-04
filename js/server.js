@@ -10,6 +10,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "../index.html"));
+});
+
+app.get("/notes", function (req, res) {
+  res.sendFile(path.join(__dirname, "../notes.html"));
+});
+
 app.get("/api/notes", (req, res) => {
   fs.readFile("/db.json", "utf-8", (err, data) => {
     if (err) {
