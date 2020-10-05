@@ -1,2 +1,2 @@
-web: node js/server.js 
+web: node assets/js/server.js 
 
