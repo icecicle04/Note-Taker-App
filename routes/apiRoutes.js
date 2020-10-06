@@ -1,6 +1,6 @@
 // load data
 
-const notes = require("../assets/js/index");
+const notes = require("../public/assets/js/index");
 
 // routing
 
