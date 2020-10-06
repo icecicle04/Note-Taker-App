@@ -42,7 +42,7 @@ app.get("/api/notes", (req, res) => {
 
 app.post("/api/notes", (req, res) => {
   const newNote = req.body;
-  updatedData = fs.readFileSync("/db.json", "utf8");
+  updatedData = fs.readFileSync("./db.json", "utf8");
   updatedData = JSON.parse(updatedData);
   updatedData.id = newNote.length;
   updatedData.push(newNote);
