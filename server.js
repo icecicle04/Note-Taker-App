@@ -19,7 +19,7 @@ app.get("/notes", function (req, res) {
 });
 
 app.get("/api/notes", (req, res) => {
-  return res.sendFile(path.join(__dirname, "/db.json"));
+  return res.sendFile(path.join(__dirname, "./db.json"));
 });
 
 app.get("/api/notes", (req, res) => {
@@ -39,7 +39,7 @@ app.get("/api/notes", (req, res) => {
     });
   });
 });
-
+//posts new note
 app.post("/api/notes", (req, res) => {
   const newNote = req.body;
   updatedData = fs.readFileSync("./db.json", "utf8");
@@ -53,6 +53,7 @@ app.post("/api/notes", (req, res) => {
   res.json(JSON.parse(updatedData));
 });
 
+//deletes clicked note
 app.delete("api/notes/:id", (req, res) => {
   const deleteNote = req.params.id;
   updatedData = fs.readFileSync("./db.json", "utf8");
@@ -67,6 +68,7 @@ app.delete("api/notes/:id", (req, res) => {
   res.json(JSON.parse(updatedData));
 });
 
+// server listen
 app.listen(PORT, () => {
   console.log(`App is running on http://localhost:${PORT}`);
 });
