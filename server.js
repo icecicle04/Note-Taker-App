@@ -41,7 +41,6 @@ app.get("/api/notes", (req, res) => {
 });
 
 app.post("/api/notes", (req, res) => {
-  console.log(req.body);
   fs.readFile("/db.json", "utf-8", (err, data) => {
     if (err) {
       console.log(err);
@@ -54,12 +53,12 @@ app.post("/api/notes", (req, res) => {
     console.log(data);
     const updatedData = JSON.parse(data);
     updatedData.push(req.body);
-    console.log(updatedData);
+    // console.log(updatedData);
     fs.writeFile("/db.json", JSON.stringify(updatedData), (err) => {
       if (err)
         if (err) {
           console.log(err);
-          return res.status(500).json({
+          return res.status(400).json({
             error: true,
             data: null,
             message: "Unable to add note.",
