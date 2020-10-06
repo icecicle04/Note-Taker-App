@@ -19,7 +19,7 @@ app.get("/notes", function (req, res) {
 });
 
 app.get("/api/notes", (req, res) => {
-  return res.sendFile(path.join(__dirname, "./db.json"));
+  res.sendFile(path.join(__dirname, "./db.json"));
 });
 
 app.get("/api/notes", (req, res) => {

@@ -16,3 +16,9 @@ module.exports = function (app) {
 app.post("/api/notes", function (req, res) {
   notes.push(req.body);
 });
+
+// api delete requests
+
+app.delete("/api/notes", function (req, res) {
+  notes.delete(req.body);
+});
