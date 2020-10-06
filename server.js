@@ -59,7 +59,7 @@ app.delete("api/notes/:id", function (req, res) {
   const deleteNoteId = req.params.id;
   updatedData = fs.readFileSync("./db.json", "utf8");
   updatedData = JSON.parse(updatedData);
-  updatedData = updatedData.filter(function (note) {
+  updatedData = updatedData.filter(function (deleteNoteId) {
     return note.id != deleteNoteId;
   });
   updatedData = JSON.stringify(updatedData);
