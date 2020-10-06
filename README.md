@@ -38,3 +38,8 @@ Tested to work on Heroku
 ## Questions
 
 Email Ali @ Icecicle04@gmail.com
+
+## Images
+
+![](./Images/Homepage.png)
+![](./Images/Notes.png)
