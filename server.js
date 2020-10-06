@@ -1,9 +1,9 @@
 const express = require("express");
 const fs = require("fs");
 const { stringify } = require("querystring");
+
 const app = express();
 const path = require("path");
-
 const PORT = process.env.PORT || 8080;
 
 app.use(express.urlencoded({ extended: true }));
@@ -19,6 +19,7 @@ app.get("/notes", function (req, res) {
 });
 
 app.get("/api/notes", (req, res) => {
+  res.sendFile(path.join(__dirname, "/db.json"));
   fs.readFile("/db.json", "utf-8", (err, data) => {
     if (err) {
       console.log(err);
