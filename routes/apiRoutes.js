@@ -1,18 +1,18 @@
-// load data
+// // load data
 
-const notes = require("../public/assets/js/index");
+// const notes = require("../public/assets/js/index");
 
-// routing
+// // routing
 
-module.exports = function (app) {
-  //api get requests
-  app.get("/api/notes", function (req, res) {
-    res.json(notes);
-  });
-};
+// module.exports = function (app) {
+//   //api get requests
+//   app.get("/api/notes", function (req, res) {
+//     res.json(notes);
+//   });
+// };
 
-// api post requests
+// // api post requests
 
-app.post("/api/notes", function (req, res) {
-  notes.push(req.body);
-});
+// app.post("/api/notes", function (req, res) {
+//   notes.push(req.body);
+// });
