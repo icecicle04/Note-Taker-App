@@ -44,7 +44,7 @@ app.post("/api/notes", (req, res) => {
   fs.readFile("/db.json", "utf-8", (err, data) => {
     if (err) {
       console.log(err);
-      return res.status(500).json({
+      return res.status(250).json({
         error: true,
         data: null,
         message: "Unable to add note.",
