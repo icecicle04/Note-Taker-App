@@ -19,7 +19,10 @@ app.get("/notes", function (req, res) {
 });
 
 app.get("/api/notes", (req, res) => {
-  res.sendFile(path.join(__dirname, "/db.json"));
+  return res.sendFile(path.join(__dirname, "/db.json"));
+});
+
+app.get("/api/notes", (req, res) => {
   fs.readFile("/db.json", "utf-8", (err, data) => {
     if (err) {
       console.log(err);
