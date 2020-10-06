@@ -54,12 +54,13 @@ app.post("/api/notes", (req, res) => {
 });
 
 //deletes clicked note
-app.delete("api/notes/:id", (req, res) => {
-  const deleteNote = req.params.id;
+
+app.delete("api/notes/:id", function (req, res) {
+  const deleteNoteId = req.params.id;
   updatedData = fs.readFileSync("./db.json", "utf8");
   updatedData = JSON.parse(updatedData);
-  updatedData = updatedData.filter((updatedData) => {
-    return updatedData.id != deleteNote;
+  updatedData = updatedData.filter(function (note) {
+    return note.id != deleteNoteId;
   });
   updatedData = JSON.stringify(updatedData);
   fs.writeFile("./db.json", updatedData, "utf8", (err) => {
